@@ -1,13 +1,19 @@
 import { motion } from "framer-motion";
 import { clinic } from "@/data/clinic-data";
 import { reveal, revealFast } from "@/lib/animation";
+import interiorPhoto from "@/assets/clinic-interior.jpg";
+import detailPhoto from "@/assets/dental-detail.jpg";
+import consultationPhoto from "@/assets/dental-consultation.jpg";
 
 export function Gallery() {
   return (
     <section className="gallery-section" aria-labelledby="gallery-title">
       <div className="gallery-head page-wrap">
         <div>
-          <p className="section-label">A considered setting</p>
+          <p className="section-label">
+            <span aria-hidden="true" />
+            A considered setting
+          </p>
           <h2 id="gallery-title">An atmosphere of <i>ease.</i></h2>
         </div>
         <span>ILLUSTRATIVE IMAGERY · NOT CLINIC PHOTOGRAPHY</span>
@@ -15,8 +21,8 @@ export function Gallery() {
       <div className="gallery-grid page-wrap">
         <figure className="gallery-image gallery-image--large">
           <img
-            src="/assets/clinic-interior.jpg"
-            alt="Bright contemporary dental treatment room with natural daylight; illustrative image, not a photograph of {clinic.name}"
+            src={interiorPhoto}
+            alt={`Bright contemporary dental treatment room with natural daylight; illustrative image, not a photograph of ${clinic.name}`}
             width={1600}
             height={1104}
             loading="lazy"
@@ -28,8 +34,8 @@ export function Gallery() {
         </figure>
         <figure className="gallery-image gallery-image--detail">
           <img
-            src="/assets/dental-detail.jpg"
-            alt="Dental examination instruments arranged in a modern treatment room; illustrative image, not a photograph of {clinic.name}"
+            src={detailPhoto}
+            alt={`Dental examination instruments arranged in a modern treatment room; illustrative image, not a photograph of ${clinic.name}`}
             width={1200}
             height={1504}
             loading="lazy"
@@ -41,8 +47,8 @@ export function Gallery() {
         </figure>
         <figure className="gallery-image gallery-image--consultation">
           <img
-            src="/assets/dental-consultation.jpg"
-            alt="Consultation about a tooth model in a contemporary clinic; illustrative image, not a photograph of {clinic.name}"
+            src={consultationPhoto}
+            alt={`Consultation about a tooth model in a contemporary clinic; illustrative image, not a photograph of ${clinic.name}`}
             width={1312}
             height={1008}
             loading="lazy"
