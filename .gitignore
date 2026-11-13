@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build artifacts
+dist
+.output
+.wrangler
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# IDEs
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
